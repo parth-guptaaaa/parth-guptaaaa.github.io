@@ -158,20 +158,6 @@
         }
     </style>
 
-<script>
-    const moreLink = document.querySelector('.more-link');
-    const moreText = document.querySelector('.more');
-    moreLink.addEventListener('click', function(event) {
-      event.preventDefault();
-      if (moreText.style.display === 'none') {
-        moreText.style.display = 'block';
-        moreLink.innerHTML = 'Read Less';
-      } else {
-        moreText.style.display = 'none';
-        moreLink.innerHTML = 'Read More';
-      }
-    });
-  </script>
   <input type="radio" name="nav" id="first" checked/>
   <input type="radio" name="nav" id="second" />
   <input type="radio" name="nav" id="third" />
@@ -197,6 +183,20 @@
     <h2>John Doe</h2>
     <h6>Developer Relations at Woof Studios</h6>
   </div>
+  <script>
+    const moreLink = document.querySelector('.more-link');
+    const moreText = document.querySelector('.more');
+    moreLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (moreText.style.display === 'none') {
+        moreText.style.display = 'block';
+        moreLink.innerHTML = 'Read Less';
+      } else {
+        moreText.style.display = 'none';
+        moreLink.innerHTML = 'Read More';
+      }
+    });
+  </script>
   
   <div class="three slide">
     <blockquote>
