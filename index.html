@@ -152,6 +152,26 @@
 
 <h1> CSS3 Testimonials Slider</h1>
 <div class="container">
+    <style>
+        .more {
+          display: none;
+        }
+    </style>
+
+<script>
+    const moreLink = document.querySelector('.more-link');
+    const moreText = document.querySelector('.more');
+    moreLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (moreText.style.display === 'none') {
+        moreText.style.display = 'block';
+        moreLink.innerHTML = 'Read Less';
+      } else {
+        moreText.style.display = 'none';
+        moreLink.innerHTML = 'Read More';
+      }
+    });
+  </script>
   <input type="radio" name="nav" id="first" checked/>
   <input type="radio" name="nav" id="second" />
   <input type="radio" name="nav" id="third" />
