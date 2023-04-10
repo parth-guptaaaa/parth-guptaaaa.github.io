@@ -49,6 +49,26 @@ $(document).ready(function(){
         nav: true, // Disable navigation buttons
         dots: true // Disable dots navigation
     });
+
+    $('.test-slider').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          992: {
+            items: 3
+          }
+        }
+      });
     
 })(jQuery);
 
