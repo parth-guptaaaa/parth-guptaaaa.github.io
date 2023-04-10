@@ -40,17 +40,14 @@ $(document).ready(function(){
     "use strict";
     
     $(".clients-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: { 0: {items: 2}, 768: {items: 4}, 900: {items: 6} }
-    });
-
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
+        items: 1, // Display one item at a time
+        loop: true, // Enable loop
+        autoplay: true, // Enable autoplay
+        autoplayTimeout: 3000, // Set autoplay timeout to 3 seconds
+        autoplayHoverPause: true, // Pause autoplay on hover
+        smartSpeed: 1000, // Set sliding speed to 1 second
+        nav: false, // Disable navigation buttons
+        dots: false // Disable dots navigation
     });
     
 })(jQuery);
