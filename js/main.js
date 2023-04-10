@@ -46,8 +46,8 @@ $(document).ready(function(){
         autoplayTimeout: 3000, // Set autoplay timeout to 3 seconds
         autoplayHoverPause: true, // Pause autoplay on hover
         smartSpeed: 1000, // Set sliding speed to 1 second
-        nav: false, // Disable navigation buttons
-        dots: false // Disable dots navigation
+        nav: true, // Disable navigation buttons
+        dots: true // Disable dots navigation
     });
     
 })(jQuery);
