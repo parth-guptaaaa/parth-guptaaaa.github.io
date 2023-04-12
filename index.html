@@ -25,14 +25,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
 
     <style>
         .service-container {
             height: 16vw;
-            overflow-y:scroll;
+            overflow-y: scroll;
         }
+
         .card-h {
             height: 32vw;
+        }
+
+        .shadow-effect {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #ECECEC;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        #customers-testimonials .shadow-effect p {
+            font-family: inherit;
+            font-size: 17px;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+            font-weight: 300;
+        }
+
+        .testimonial-name {
+            margin: -17px auto 0;
+            display: table;
+            width: auto;
+            background: #3190E7;
+            padding: 9px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 9px 18px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.05);
+        }
+
+        #customers-testimonials .item {
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 80px;
+            opacity: .2;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #customers-testimonials .owl-item.active.center .item {
+            opacity: 1;
+            -webkit-transform: scale3d(1.0, 1.0, 1);
+            transform: scale3d(1.0, 1.0, 1);
+        }
+
+        .owl-carousel .owl-item img {
+            transform-style: preserve-3d;
+            max-width: 90px;
+            margin: 0 auto 17px;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+            background: #3190E7;
+            transform: translate3d(0px, -50%, 0px) scale(0.7);
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot {
+            display: inline-block;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+            background: #3190E7;
+            display: inline-block;
+            height: 20px;
+            margin: 0 2px 5px;
+            transform: translate3d(0px, -50%, 0px) scale(0.3);
+            transform-origin: 50% 50% 0;
+            transition: all 250ms ease-out 0s;
+            width: 20px;
         }
     </style>
 </head>
@@ -86,10 +168,13 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" style="all: unset; cursor: pointer;">
-                        <div class="item card-h"> <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
+                        style="all: unset; cursor: pointer;">
+                        <div class="item card-h"> <span class="icon feature_box_col_one"><i
+                                    class="fa fa-laptop"></i></span>
                             <h6>Human Monitoring and Customer Analytics</h6>
-                            <p class="service-container">We help improve quality of life at both personal and work space. Fatigue, stress,
+                            <p class="service-container">We help improve quality of life at both personal and work
+                                space. Fatigue, stress,
                                 anxiety,
                                 depression, are major causes which result in erroneous behavior in individuals. We
                                 design
@@ -104,7 +189,63 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Our Servies</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="icon-grid">
+                                    <a href="https://www.google.com/">
+                                        <div class="icon">
+                                            <div class="item">  <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span><h4>Ruhzan</h4> </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a class="service-link" href="https://www.google.com/">
+                                        <div class="icon">
+                                            <div class="item">  <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span><h4>SHM</h4> </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="service-link" href="https://www.google.com/">
+                                        <div class="icon">
+                                            <div class="item">  <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span><h4>Pehchan</h4> </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="service-link" href="https://www.google.com/">
+                                        <div class="icon">
+                                            <div class="item">  <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span><h4>Health Kiosk</h4> </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-sm-6">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        style="all: unset; cursor: pointer;">
+
+                        <div class="item card-h"> <span class="icon feature_box_col_two"><i
+                                    class="fa fa-android"></i></span>
+                            <h6>Supply chain analytics</h6>
+                            <p class="service-container">We add value to the supply chain processes by providing
+                                solutions for real-time visibility,
+                                tracking and traceability. The data collected therefrom can help make data-driven
+                                decisions.
+                                We also provide solutions for optimal decision making in the areas such as distribution
+                                planning, facility location planning, inventory planning and supply chain risk
+                                mitigation.
+                            </p>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Our Servies2</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
@@ -122,55 +263,22 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-lg-4 col-sm-6">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="all: unset; cursor: pointer;">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"
+                        style="all: unset; cursor: pointer;">
 
-                    <div class="item card-h"> <span class="icon feature_box_col_two"><i class="fa fa-android"></i></span>
-                        <h6>Supply chain analytics</h6>
-                        <p class="service-container">We add value to the supply chain processes by providing solutions for real-time visibility,
-                            tracking and traceability. The data collected therefrom can help make data-driven decisions.
-                            We also provide solutions for optimal decision making in the areas such as distribution
-                            planning, facility location planning, inventory planning and supply chain risk mitigation.
-                        </p>
-                    </div>
-                </button>
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Our Servies2</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                        <div class="item card-h"> <span class="icon feature_box_col_three"><i
+                                    class="fa fa-magic"></i></span>
+                            <h6>Fault diagnosis and Prognosis</h6>
+                            <p class="service-container">We design Smart Gadgets which are equipped with AI,IoT &
+                                Embedded Systems for Industrial
+                                safety. Our Energy saving products are well designed for early fault detection and
+                                warning
+                                systems for Industries. Such systems can reduce downtime & improve the reliability and
+                                integrity of the industrial machines.</p>
                         </div>
-                        <div class="modal-body">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, perferendis porro
-                            architecto atque possimus corrupti non quia ad quod illo impedit dolores aperiam
-                            voluptate, consectetur recusandae quo animi eveniet minus.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Understood</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" style="all: unset; cursor: pointer;">
-
-                    <div class="item card-h"> <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
-                        <h6>Fault diagnosis and Prognosis</h6>
-                        <p class="service-container">We design Smart Gadgets which are equipped with AI,IoT & Embedded Systems for Industrial
-                            safety. Our Energy saving products are well designed for early fault detection and warning
-                            systems for Industries. Such systems can reduce downtime & improve the reliability and
-                            integrity of the industrial machines.</p>
-                    </div>
-                </button>
-                <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                    </button>
+                    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
@@ -269,7 +377,79 @@
     </div>
 
     <h1> Testimonials</h1>
-    <div class="container">
+    <section class="testimonials" style="background-color: #fff;">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="customers-testimonials" class="owl-carousel">
+
+                        <!--TESTIMONIAL 1 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle"
+                                    src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                                <p>Dramatically maintain clicks-and-mortar solutions without functional
+                                    solutions. Completely synergize resource taxing relationships via
+                                    premier niche markets. Professionally cultivate.</p>
+                            </div>
+                            <div class="testimonial-name">EMILIANO AQUILANI</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 1 -->
+                        <!--TESTIMONIAL 2 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle"
+                                    src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                                <p>Dramatically maintain clicks-and-mortar solutions without functional
+                                    solutions. Completely synergize resource taxing relationships via
+                                    premier niche markets. Professionally cultivate.</p>
+                            </div>
+                            <div class="testimonial-name">ANNA ITURBE</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 2 -->
+                        <!--TESTIMONIAL 3 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle"
+                                    src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                                <p>Dramatically maintain clicks-and-mortar solutions without functional
+                                    solutions. Completely synergize resource taxing relationships via
+                                    premier niche markets. Professionally cultivate.</p>
+                            </div>
+                            <div class="testimonial-name">LARA ATKINSON</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 3 -->
+                        <!--TESTIMONIAL 4 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle"
+                                    src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                                <p>Dramatically maintain clicks-and-mortar solutions without functional
+                                    solutions. Completely synergize resource taxing relationships via
+                                    premier niche markets. Professionally cultivate.</p>
+                            </div>
+                            <div class="testimonial-name">IAN OWEN</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 4 -->
+                        <!--TESTIMONIAL 5 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle"
+                                    src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                                <p>Dramatically maintain clicks-and-mortar solutions without functional
+                                    solutions. Completely synergize resource taxing relationships via
+                                    premier niche markets. Professionally cultivate.</p>
+                            </div>
+                            <div class="testimonial-name">MICHAEL TEDDY</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 5 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="container">
         <style>
             .more {
                 display: none;
@@ -307,20 +487,6 @@
             <h2>John Doe</h2>
             <h6>Developer Relations at Woof Studios</h6>
         </div>
-        <script>
-            const moreLink = document.querySelector('.more-link');
-            const moreText = document.querySelector('.more');
-            moreLink.addEventListener('click', function (event) {
-                event.preventDefault();
-                if (moreText.style.display === 'none') {
-                    moreText.style.display = 'block';
-                    moreLink.innerHTML = 'Read Less';
-                } else {
-                    moreText.style.display = 'none';
-                    moreLink.innerHTML = 'Read More';
-                }
-            });
-        </script>
 
         <div class="three slide">
             <blockquote>
@@ -337,7 +503,7 @@
         <br>
         <br>
         <br>
-    </div>
+    </div> -->
 
     <div class="clients mt-100">
         <div class="container">
@@ -347,7 +513,35 @@
                     We don't just build softwares, we build your business.
                 </p>
             </div>
-            <div class="owl-carousel clients-carousel">
+            <div class="slider-container-1">
+                <div class="slider-1">
+                    <img src="./img1.jpg" alt="Client Logo">
+                    <img src="./img2.jpg" alt="Client Logo">
+                    <img src="./img3.jpg" alt="Client Logo">
+                    <img src="./img2.jpg" alt="Client Logo">
+                    <img src="./img1.jpg" alt="Client Logo">
+                    <img src="./img3.jpg" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                    <img src="./images/image.png" alt="Client Logo">
+                </div>
+                <div class="dots-container-1">
+                  <span class="dot-1 active"></span>
+                  <span class="dot-1"></span>
+                  <span class="dot-1"></span>
+                </div>
+              </div>
+              
+              
+            <!-- <div class="owl-carousel clients-carousel">
                 <img src="./images/image.png" alt="Client Logo">
                 <img src="./images/image.png" alt="Client Logo">
                 <img src="./images/image.png" alt="Client Logo">
@@ -356,7 +550,7 @@
                 <img src="./images/image.png" alt="Client Logo">
                 <img src="./images/image.png" alt="Client Logo">
                 <img src="./images/image.png" alt="Client Logo">
-            </div>
+            </div> -->
         </div>
     </div>
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
@@ -369,75 +563,75 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-<div class="pt-5 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="section-head-1 col-sm-12" style="text-align: center;">
-          <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
-          
-          <p>Unleashing the power of Analytics, IoT, Embedded Systems and AI. <br>
-            Creating cutting-edge solutions to transform businesses.<br>
-            Make them dive into the era of Industry 4.0.<br>
-            </p>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="image">
-                    <img src="./images/pexels-vinicius-wiesehofer-1130624.jpg" alt="Team member 1">
-                </div>
-                <div class="info">
-                    <h3>Nicole Bell</h3>
-                    <span>Mobile Developer</span>
-                    <div class="icons">
-                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="image">
-                    <img src="./images/pexels-hussein-altameemi-2776353.jpg" alt="Team member 1">
-                </div>
-                <div class="info">
-                    <h3>John Doe</h3>
-                    <span>Graphic Designer</span>
-                    <div class="icons">
-                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card">
-                <div class="image">
-                    <img src="./images/pexels-andrea-piacquadio-745136.jpg" alt="Team member 1">
-                </div>
-                <div class="info">
-                    <h3>Rose Matthews</h3>
-                    <span>Web Designer</span>
-                    <div class="icons">
-                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="section-head-1 col-sm-12" style="text-align: center;">
+                    <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
 
-  <input type="radio" name="nav" id="first" checked/>
-  <input type="radio" name="nav" id="second" />
-  <input type="radio" name="nav" id="third" />
-  
-  <div class="test">
+                    <p>Unleashing the power of Analytics, IoT, Embedded Systems and AI. <br>
+                        Creating cutting-edge solutions to transform businesses.<br>
+                        Make them dive into the era of Industry 4.0.<br>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="image">
+                            <img src="./images/pexels-vinicius-wiesehofer-1130624.jpg" alt="Team member 1">
+                        </div>
+                        <div class="info">
+                            <h3>Nicole Bell</h3>
+                            <span>Mobile Developer</span>
+                            <div class="icons">
+                                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="image">
+                            <img src="./images/pexels-hussein-altameemi-2776353.jpg" alt="Team member 1">
+                        </div>
+                        <div class="info">
+                            <h3>John Doe</h3>
+                            <span>Graphic Designer</span>
+                            <div class="icons">
+                                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="image">
+                            <img src="./images/pexels-andrea-piacquadio-745136.jpg" alt="Team member 1">
+                        </div>
+                        <div class="info">
+                            <h3>Rose Matthews</h3>
+                            <span>Web Designer</span>
+                            <div class="icons">
+                                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <input type="radio" name="nav" id="first" checked />
+                <input type="radio" name="nav" id="second" />
+                <input type="radio" name="nav" id="third" />
+
+                <!-- <div class="test">
     <div class="container">
       <div class="test-slider">
         <div class="test-item">
@@ -448,267 +642,292 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+                <!-- TESTIMONIALS -->
 
-<div class="clients mt-100">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Clients</h2>
-            <p>
-                We don't just build softwares, we build your business.
-            </p>
-        </div>
-        <div class="owl-carousel clients-carousel">
-            <img src="./images/mc.png" alt="Client Logo">
-            <img src="./images/apple.png" alt="Client Logo">
-        </div>
-    </div>
-</div>
-<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-
-<section class="team" style="margin-top: 7rem;">
-  <h1 class="heading" style="margin-top: -1.5rem;" id="team">our team</h1>
-  <p></p>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/AR.png" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Aurobindo Routray</h3>
-              <span>Director</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/Mamata Jenamani.png" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Mamta Jenamani</h3>
-              <span>Director</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/sourav.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Sourav Bagchi</h3>
-              <span>Team</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/ritwik.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Ritwik Dash</h3>
-              <span>Team</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-    <h1 class="heading">get in touch</h1>
-</section>
-<div class="contact-in">
-    <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="contact-form">
-        <form action="./contactme.php" method="POST">
-            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="contact-form-phone">
-            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
-            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
-            <input type="submit" value="Submit" name="submit" class="contact-form-btn">
-        </form>
-    </div>
-    </div>
-
-    <section class="faq">
-        <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
-        <div class="row">
-            <div class="accordion-container">
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>Who are we?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>To get a better idea of the cost of what you want to build, give us a quick phone call. We’ll
-                            ask you a few questions about the nature of the site, what sort of interactivity the site
-                            will have, your graphic design needs, etc.
-                            Then we’ll be able to give you a ballpark figure.
-                            If you’re still interested, we’ll come to your place of business and come up with a firm
-                            quote.</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>How can we help?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>The time limit of any assignment is normally dictated by the client. If you have any time
-                            limit in mind we will attempt to assemble it for you.
-                            The main general delay in the making of a website is waiting for the content of the pages to
-                            be sent to us by the client.</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>How can you contact us?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>The process begins when you contact us with your requirements. We analyze your requirements
-                            and respond to you.
-                            On the basis of the further discussion, you can choose an engagement model that suits you
-                            the best.
-                            After that, we begin the process of development.</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>How do we provide our services?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Yes. Give us your requirements and we have experienced expertise to help you give a
-                            new professional look that really wonders!</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>When do I pay?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>For most projects, equal payments are made at the start, midway, and the end of the project,
-                            but we can work with you to set up a schedule that meets your needs.
-                            We understand that this is a big investment and want to help you budget for the expense in
-                            whatever way possible.
-                            We accept checks, PayPal, and all major credit cards.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Portfolio</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#team">Team</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#faq">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                        <h4>Contact Us</h4>
-                        <p>
-                            IIT Kharagpur<br>
-                            Kharagpur, West Bengal<br>
-                            India <br>
-                            <strong>Phone:</strong> 9475555571, 6294360440<br>
-                            <strong>Email:</strong> auroma.analytics@gmail.com<br>
-                        </p>
-
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
-                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
-                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
-                            <a
-                                href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
-                                    class="ion-logo-googleplus"></i></a>
+                <!-- END OF TESTIMONIALS -->
+                <div class="clients mt-100">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2>Our Clients</h2>
+                            <p>
+                                We don't just build softwares, we build your business.
+                            </p>
                         </div>
+                        <div class="owl-carousel clients-carousel">
+                            <img src="./images/mc.png" alt="Client Logo">
+                            <img src="./images/apple.png" alt="Client Logo">
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+                <script src="lib/jquery/jquery.min.js"></script>
+                <script src="lib/jquery/jquery-migrate.min.js"></script>
+                <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="lib/easing/easing.min.js"></script>
+                <script src="lib/waypoints/waypoints.min.js"></script>
+                <script src="lib/counterup/counterup.min.js"></script>
+                <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+                <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+
+                <section class="team" style="margin-top: 7rem;">
+                    <div class="team_C">
+                        <h1 class="heading" style="margin-top: -1.5rem; align-items: center;" id="team">our team</h1>
+                        <p></p>
+                        <div class="row">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="./images/AR.png" alt="Team member 1">
+                                </div>
+                                <div class="info">
+                                    <h3>Aurobindo Routray</h3>
+                                    <span>Director</span>
+                                    <div class="icons">
+                                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="./images/Mamata Jenamani.png" alt="Team member 1">
+                                </div>
+                                <div class="info">
+                                    <h3>Mamta Jenamani</h3>
+                                    <span>Director</span>
+                                    <div class="icons">
+                                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="./images/sourav.jpg" alt="Team member 1">
+                                </div>
+                                <div class="info">
+                                    <h3>Sourav Bagchi</h3>
+                                    <span>Team</span>
+                                    <div class="icons">
+                                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="./images/ritwik.jpg" alt="Team member 1">
+                                </div>
+                                <div class="info">
+                                    <h3>Ritwik Dash</h3>
+                                    <span>Team</span>
+                                    <div class="icons">
+                                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
+                                        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                                        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                  <div class="col-lg-3 col-md-6 footer-newsletter">
-                      <h4>Subscription</h4>
-                      <p>With Our Skills Put Together, our aim is to deliver world-class solutions for product, process and market visibility.</p>
-                      <form action="newsletter.php" method="post">
-                          <input type="email" name="email"><input type="submit"  value="Subscribe">
-                      </form>
-                  </div>
+                </section>
 
+                <section id="contact" class="contact">
+                    <h1 class="heading">get in touch</h1>
+                </section>
+                <div class="contact-in">
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin"
+                            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contact-form">
+                        <form action="./contactme.php" method="POST">
+                            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required
+                                placeholder="Contact number" maxlength="10" class="contact-form-phone">
+                            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
+                            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea"
+                                required></textarea>
+                            <input type="submit" value="Submit" name="submit" class="contact-form-btn">
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                    Copyright &copy; 2021 IT Company Website. All Rights Reserved.
+                <section class="faq">
+                    <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
+                    <div class="row">
+                        <div class="accordion-container">
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <span>+</span>
+                                    <h3>Who are we?</h3>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>To get a better idea of the cost of what you want to build, give us a quick phone
+                                        call. We’ll
+                                        ask you a few questions about the nature of the site, what sort of interactivity
+                                        the site
+                                        will have, your graphic design needs, etc.
+                                        Then we’ll be able to give you a ballpark figure.
+                                        If you’re still interested, we’ll come to your place of business and come up
+                                        with a firm
+                                        quote.</p>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <span>+</span>
+                                    <h3>How can we help?</h3>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>The time limit of any assignment is normally dictated by the client. If you have
+                                        any time
+                                        limit in mind we will attempt to assemble it for you.
+                                        The main general delay in the making of a website is waiting for the content of
+                                        the pages to
+                                        be sent to us by the client.</p>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <span>+</span>
+                                    <h3>How can you contact us?</h3>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>The process begins when you contact us with your requirements. We analyze your
+                                        requirements
+                                        and respond to you.
+                                        On the basis of the further discussion, you can choose an engagement model that
+                                        suits you
+                                        the best.
+                                        After that, we begin the process of development.</p>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <span>+</span>
+                                    <h3>How do we provide our services?</h3>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>Yes. Give us your requirements and we have experienced expertise to help you give
+                                        a
+                                        new professional look that really wonders!</p>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <span>+</span>
+                                    <h3>When do I pay?</h3>
+                                </div>
+                                <div class="accordion-body">
+                                    <p>For most projects, equal payments are made at the start, midway, and the end of
+                                        the project,
+                                        but we can work with you to set up a schedule that meets your needs.
+                                        We understand that this is a big investment and want to help you budget for the
+                                        expense in
+                                        whatever way possible.
+                                        We accept checks, PayPal, and all major credit cards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>About Us</h4>
+                                    <ul>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a>
+                                        </li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>Useful Links</h4>
+                                    <ul>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Portfolio</a>
+                                        </li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#team">Team</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
+                                        <li><i class="ion-ios-arrow-forward"></i> <a href="#faq">FAQ</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                                    <h4>Contact Us</h4>
+                                    <p>
+                                        IIT Kharagpur<br>
+                                        Kharagpur, West Bengal<br>
+                                        India <br>
+                                        <strong>Phone:</strong> 9475555571, 6294360440<br>
+                                        <strong>Email:</strong> auroma.analytics@gmail.com<br>
+                                    </p>
+
+                                    <div class="social-links">
+                                        <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
+                                        <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
+                                        <a
+                                            href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                                class="ion-logo-googleplus"></i></a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-newsletter">
+                                    <h4>Subscription</h4>
+                                    <p>With Our Skills Put Together, our aim is to deliver world-class solutions for
+                                        product, process and market visibility.</p>
+                                    <form action="newsletter.php" method="post">
+                                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+                                Copyright &copy; 2021 IT Company Website. All Rights Reserved.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script>
+                <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+                <script>
         // var myModal = document.getElementById('myModal')
         // var myInput = document.getElementById('myInput')
 
@@ -723,7 +942,47 @@
         //     myInput2.focus()
         // })
 
-    </script>
+                </script>
+                <script>
+                    const moreLink = document.querySelector('.more-link');
+                    const moreText = document.querySelector('.more');
+                    moreLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        if (moreText.style.display === 'none') {
+                            moreText.style.display = 'block';
+                            moreLink.innerHTML = 'Read Less';
+                        } else {
+                            moreText.style.display = 'none';
+                            moreLink.innerHTML = 'Read More';
+                        }
+                    });
+
+                    jQuery(document).ready(function ($) {
+                        "use strict";
+                        //  TESTIMONIALS CAROUSEL HOOK
+                        $('#customers-testimonials').owlCarousel({
+                            loop: true,
+                            center: true,
+                            items: 3,
+                            margin: 0,
+                            autoplay: true,
+                            dots: true,
+                            autoplayTimeout: 8500,
+                            smartSpeed: 450,
+                            responsive: {
+                                0: {
+                                    items: 1
+                                },
+                                768: {
+                                    items: 2
+                                },
+                                1170: {
+                                    items: 3
+                                }
+                            }
+                        });
+                    });
+                </script>
 </body>
 
 </html>

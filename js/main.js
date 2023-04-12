@@ -91,6 +91,79 @@ $('.accordion-header').click(function(){
     $(this).children('span').text('-');
 });
 
+jQuery(document).ready(function($) {
+    "use strict";
+    //  TESTIMONIALS CAROUSEL HOOK
+    $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots:true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1170: {
+            items: 3
+          }
+        }
+    });
+});
+
+// stART 
+
+const slider = document.querySelector('.slider-1');
+const dotsContainer = document.querySelector('.dots-container-1');
+const dots = dotsContainer.querySelectorAll('.dot-1');
+let currentSlide = 0;
+
+const slideInterval = setInterval(() => {
+  currentSlide = (currentSlide + 1) % (slider.children.length / 5);
+  const scrollAmount = currentSlide * (slider.scrollWidth / 3);
+  slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  setActiveDot(currentSlide);
+}, 50000);
+
+const dotClickHandler = (e) => {
+  const clickedDotIndex = Array.from(dots).indexOf(e.target);
+  currentSlide = clickedDotIndex;
+  const scrollAmount = currentSlide * (slider.scrollWidth / 3);
+  slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  setActiveDot(currentSlide);
+};
+
+const setActiveDot = (dotIndex) => {
+  dots.forEach((dot) => dot.classList.remove('active'));
+  dots[dotIndex].classList.add('active');
+};
+
+dots.forEach((dot) => {
+  dot.addEventListener('click', dotClickHandler);
+});
+
+slider.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+slider.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % (slider.children.length / 5);
+    const scrollAmount = currentSlide * (slider.scrollWidth / 3);
+    slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    setActiveDot(currentSlide);
+  }, 10000);
+});
+
+// END 
 
 
 });
+
+
