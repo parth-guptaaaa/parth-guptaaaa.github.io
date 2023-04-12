@@ -762,14 +762,15 @@
                             width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <div class="contact-form">
-                        <form action="./contactme.php" method="POST">
-                            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required
+                        <form id="form1">
+                            <input type="text" style="text-transform: none;" name="name" placeholder="Name" class="contact-form-txt" required>
+                            <input type="tel" style="text-transform: none;" id="phone" name="contact" pattern="[0-9]{10}" required
                                 placeholder="Contact number" maxlength="10" class="contact-form-phone">
-                            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
-                            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea"
+                            <input type="email" style="text-transform: none;" name="email" placeholder="Email" class="contact-form-email" required>
+                            <textarea placeholder="Your Message" style="text-transform: none;" name="message" class="contact-form-txtarea"
                                 required></textarea>
                             <input type="submit" value="Submit" name="submit" class="contact-form-btn">
+                            <span id="subhead" style="margin: 8px; color: green; font-size: large;"></span>
                         </form>
                     </div>
                 </div>
@@ -908,9 +909,10 @@
                                     <h4>Subscription</h4>
                                     <p>With Our Skills Put Together, our aim is to deliver world-class solutions for
                                         product, process and market visibility.</p>
-                                    <form action="newsletter.php" method="post">
-                                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                                    <form id="form2" style="margin-bottom: 10px;">
+                                        <input style="text-transform: none;" type="email" name="email"><input type="submit" value="Subscribe">
                                     </form>
+                                    <h9 id="subscribed" style="color: white;"></h9>
                                 </div>
 
                             </div>
@@ -988,6 +990,70 @@
                         });
                     });
                 </script>
-</body>
+                <script>
+                    let form1 = document.getElementById("form1");
+                    // The document.querySelector() method returns the first element that matches a specified CSS selector.
+                    form1.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        document.querySelector("#subhead").innerHTML = "Submitted successfully!";
+                        // The preventDefault() method stops the form from submitting and prevents the page from refreshing.
+                        // document.querySelector("#subhead").value = "Submitted successfully!";
+                        // Change the value of the submit button to "Submitting..." while the form is being submitted.
+                        let data = new FormData(form1);
+                        // The FormData() method creates a new FormData object that contains the values of all the form fields.
+                        fetch('https://script.google.com/macros/s/AKfycbw-cHD1EplTJbaKp1jAVsEmAzx2DbhbzW793CVUJVwCWIb7f7WBR1BuXxxg9wxMQTmKAw/exec', {
+                                method: "POST",
+                                body: data
+                            })
+                            // The fetch() method is used to make a request to the server and retrieve data.
+                            // This is an example API endpoint. Replace it with the actual URL for the API endpoint you want to use.
+                            .then(res => res.text())
+                            // The .then() method is used to handle the response from the server.
+                            // The response is converted to text using the res.text() method.
+                            .then(data => {
+                                const msg =  document.getElementById("subhead"); 
+                                setTimeout(function() {
+                                    msg.innerHTML = "";
+                                }, 3000);
+                                document.getElementById("form1").reset();
+                                // The innerHTML property sets or returns the HTML content of an element.
+                                // Here, we are setting the content of the <h1> element to the response from the server.
+                                // Change the value of the submit button back to "Submit" after the form has been submitted.
+                            });
+                    })
+                </script>
 
+                <script>
+                    let form2 = document.getElementById("form2");
+                    // The document.querySelector() method returns the first element that matches a specified CSS selector.
+                    form2.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        document.querySelector("#subscribed").innerHTML = "Subscribed successfully!";
+                        // The preventDefault() method stops the form from submitting and prevents the page from refreshing.
+                        // document.querySelector("#subhead").value = "Submitted successfully!";
+                        // Change the value of the submit button to "Submitting..." while the form is being submitted.
+                        let data1 = new FormData(form2);
+                        // The FormData() method creates a new FormData object that contains the values of all the form fields.
+                        fetch('https://script.google.com/macros/s/AKfycbzrQtCwkZ2l7LJ2RSCrpY1QPLeL9mS5JDSBAheswsEGVzL0p9Z9idThfEqsY826U10c/exec', {
+                                method: "POST",
+                                body: data1
+                            })
+                            // The fetch() method is used to make a request to the server and retrieve data.
+                            // This is an example API endpoint. Replace it with the actual URL for the API endpoint you want to use.
+                            .then(res => res.text())
+                            // The .then() method is used to handle the response from the server.
+                            // The response is converted to text using the res.text() method.
+                            .then(data1 => {
+                                const msg1 =  document.getElementById("subscribed"); 
+                                setTimeout(function() {
+                                    msg1.innerHTML = "";
+                                }, 3000);
+                                document.getElementById("form2").reset();
+                                // The innerHTML property sets or returns the HTML content of an element.
+                                // Here, we are setting the content of the <h1> element to the response from the server.
+                                // Change the value of the submit button back to "Submit" after the form has been submitted.
+                            });
+                    })
+                </script>
+</body>
 </html>
