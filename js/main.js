@@ -129,7 +129,7 @@ const slideInterval = setInterval(() => {
   const scrollAmount = currentSlide * (slider.scrollWidth / 3);
   slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   setActiveDot(currentSlide);
-}, 50000);
+}, 5000);
 
 const dotClickHandler = (e) => {
   const clickedDotIndex = Array.from(dots).indexOf(e.target);
@@ -158,7 +158,7 @@ slider.addEventListener('mouseleave', () => {
     const scrollAmount = currentSlide * (slider.scrollWidth / 3);
     slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     setActiveDot(currentSlide);
-  }, 10000);
+  }, 5000);
 });
 
 // END 
