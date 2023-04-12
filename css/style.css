@@ -884,8 +884,6 @@ display: inline-block;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-right: -73px;
-    margin-left: 12px;
 }
 
 .team .row .card{
